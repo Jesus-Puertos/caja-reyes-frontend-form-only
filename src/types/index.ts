@@ -1,4 +1,4 @@
-import { object, string, number, array, Output } from "valibot";
+import { object, string, number, array, InferOutput } from "valibot";
 
 /**Auth user */
 
@@ -9,7 +9,7 @@ const authSchema = object({
     password_confirmation: string(),
 });
 
-type Auth = Output < typeof authSchema > ;
+type Auth =InferOutput < typeof authSchema > ;
 export type UserLoginForm = Pick < Auth, "email" | "password" > ;
 
 export const DraftPatnerSchema = object({
@@ -36,4 +36,4 @@ export const PatnerSchema = object({
 });
 
 export const PatnersSchema = array(PatnerSchema);
-export type Patner = Output < typeof PatnerSchema > ;
+export type Patner =InferOutput < typeof PatnerSchema > ;

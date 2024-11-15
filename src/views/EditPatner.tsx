@@ -1,7 +1,8 @@
 import { Link, Form, useActionData, ActionFunctionArgs, redirect, LoaderFunctionArgs, useLoaderData } from "react-router-dom";
 import ErrorMessage from "../components/shared/ErrorMessage";
-import { addPatner, getPatnerById, updatePatner } from "../services/PatnerService";
+import { getPatnerById, updatePatner } from "../services/PatnerService";
 import PatnerForm from "../components/shared/Patner/PatnerForm";
+import { Patner } from "../types";
 
 export async function loader({params} : LoaderFunctionArgs) {
 

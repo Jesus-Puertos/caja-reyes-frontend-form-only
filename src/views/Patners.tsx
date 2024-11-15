@@ -1,6 +1,7 @@
 import { Link, useLoaderData } from "react-router-dom"
 import { getPatners } from "../services/PatnerService"
 import PatnerDeatils from "../components/shared/PatnerDeatils";
+import { Patner } from "../types";
 
 export async function loader() {
   const patners = await getPatners();
